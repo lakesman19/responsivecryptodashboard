@@ -221,6 +221,7 @@ nav  .profile-area button{
     width: 96%;
     gap: 2rem;
     margin: 1rem auto 4rem;
+    /* border: #131316 solid; */
 }
 main aside {
     display: flex;
@@ -294,6 +295,7 @@ main aside {
      gap: 2rem;
      /* width: calc(100%-200px); */
      /* border: solid red; */
+     width: 100%;
  }
 main .main2 #middle{
     width: 60%;
@@ -391,6 +393,7 @@ main .main2 #middle .montly-reports{
     justify-content: space-between;
     gap: 1rem;
     margin-top: 2rem;
+    width: 100%;
  }
  main .main2 #middle .montly-reports h1{
     font-weight: 700;
@@ -402,6 +405,7 @@ main .main2 .fast-payment{
     display: flex;
     align-self: center;
     gap: 2rem;
+    width: 100%;
  }
  main .main2 .fast-payment .badges{
     display: flex;
@@ -455,6 +459,7 @@ main .main2 .fast-payment{
     background: var(--color-white);
     border-radius: var(--border-radius-1);
     /* padding: var(--card-padding); */
+    width: 100%;
  }
  #right .investment img{
     width: 2.4rem;
@@ -490,6 +495,9 @@ main .main2 .fast-payment{
  /* ...............transaction ...................... */
  main .recent-transaction img {
     width: 2.2rem;
+ }
+ main .recent-transaction{
+     width: 100%;
  }
  main .recent-transaction .transactions{
     display: flex;
@@ -543,6 +551,99 @@ main .main2 .fast-payment{
 /*.............................Media queries for phones.............................. */
 @media screen 
 and (min-width:250px)
+and (max-width:350px){
+    nav .container .search{
+        display: none;
+     }
+     nav .profile-area{
+        gap: 0.8rem;
+  }
+  nav .profile  h5, 
+nav  .profile span{
+   display: none;
+}
+
+nav  .profile-area button{
+   display: inline;
+   color: var(--color-dark);
+}
+.main2 {
+    /* grid-template-columns: 1fr ; */
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+ }
+ main .main2 #middle{
+     width: 100%;
+ }
+ #right{
+     width: 100%;
+ }
+ main aside{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 3;
+    background: var(--color-white);
+    width: 22rem;
+    height: 100vh;
+    display: none;
+    box-shadow: 2rem 0 2rem var(--color-primary-light);
+    animation: showmenu 400ms ease forwards;
+ }
+ @keyframes showmenu {
+    to{
+        left: 0;
+    }
+ }
+ main aside button{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    color: var(--color-dark);
+    cursor: pointer;
+ }
+ main aside .sidebar{
+    margin-top: 4rem;
+ }
+ main aside .updates{
+    display: none;
+ }
+ main .main2 #middle .cards {
+    grid-template-columns:1fr ;
+    width: 100%;
+    
+ }
+ main .main2 .fast-payment{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    width: 100%;
+    gap: 1.4rem;
+ }
+ main .main2 #middle .montly-reports{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+ }
+
+}
+
+
+
+
+
+
+@media screen 
+and (min-width:351px)
 and (max-width:600px){
    nav .profile-area{
        gap: 2.6rem;
@@ -565,7 +666,9 @@ nav  .profile-area button{
    gap: 2rem;
    flex-direction: column;
    /* width: calc(100%-200px); */
-   /* border: solid red; */
+    width: 100%;
+    /* border: solid red; */
+
 }
 main .main2 #middle{
     width: 100%;
@@ -611,17 +714,21 @@ main aside .updates{
 }
 main .main2 #middle .cards {
    grid-template-columns:1fr ;
+   width: 100%;
+
 }
 main .main2 .fast-payment{
    flex-direction: column;
    align-items: flex-start;
    margin-top: 3rem;
    gap: 1.4rem;
+   width: 100%;
+
 }
 }
 @media screen 
 and (min-width:601px)
-and (max-width:1024px){
+and (max-width:1299px){
    nav .container .search{
        display: none;
    }
@@ -700,7 +807,7 @@ and (max-width:1024px){
    
 }
 @media screen 
-and (min-width:1025px)
+and (min-width:1300px)
 and (max-width:1500px){
     main aside {
         display: flex;
@@ -708,6 +815,24 @@ and (max-width:1500px){
         justify-content: space-between;
         /* height: 100vh; */
         width: 350px;
+     }
+     main aside  .sidebar a{
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        height: 4.2rem;
+        color: var(--color-gray-light);
+        position: relative;
+        margin-top: 3rem;
+     }
+     main aside  .sidebar a:nth-child(1){
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        height: 4.2rem;
+        color: var(--color-gray-light);
+        position: relative;
+        margin-top: 0rem;
      }
     main .main2{
         flex-direction: column;
