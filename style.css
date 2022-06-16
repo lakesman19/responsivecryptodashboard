@@ -48,7 +48,7 @@ body{
     background: var(--color-light);
     font-family: Averia Serif Libre ;
     min-height: 100vh;
-    /* width: 100vw; */
+    width: 100%;
     color: var(--color-dark);
 }
 button{
@@ -216,69 +216,66 @@ nav  .profile-area button{
 }
  /* end  of nav bar */
  main{
-     display: grid;
-     grid-template-columns: 16rem auto 30rem;
-     width: 96%;
-     gap: 2rem;
-     margin: 1rem auto 4rem;
- }
- /* main section{
-     background: red;
- } */
-
+     display: flex;
+     /* justify-content: space-evenly; */
+    width: 96%;
+    gap: 2rem;
+    margin: 1rem auto 4rem;
+}
 main aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 88vh;
-}
-main aside button{
+    /* height: 88vh; */
+    width: 250px;
+ }
+ main aside button{
     display: none;
-}
-main aside  .sidebar a{
+ }
+ main aside  .sidebar a{
     display: flex;
     align-items: center;
     gap: 1.2rem;
     height: 4.2rem;
     color: var(--color-gray-light);
     position: relative;
-}
-main aside .sidebar a span{
+ }
+ main aside .sidebar a span{
     font-size: 1.7rem;
     margin-left: 3rem;
     transition: all 300ms ease;
-
-}
-main aside .sidebar a.active{
+ 
+ }
+ main aside .sidebar a.active{
    background: var(--color-white);
    color: var(--color-primary);
-}
-main aside  .sidebar  a.active::before{
+ }
+ main aside  .sidebar  a.active::before{
     content: ' ';
     width:6px;
     height: 100%;
     background: var(--color-primary);
     position: absolute;
-}
-aside .sidebar a:hover{
+ }
+ aside .sidebar a:hover{
     color:var(--color-primary);
-}
-aside .sidebar a:hover span{
+ }
+ aside .sidebar a:hover span{
     margin-left: 2rem;
-}
-main aside .sidebar h4{
+ }
+ main aside .sidebar h4{
     font-weight: 500;
-}
-main aside .updates{
+ }
+ main aside .updates{
     background: var(--color-white);
     border-radius: var(--border-radius-1);
     text-align: center;
     padding: var(--card-padding);
-}
-main aside .updates  span{
+ }
+ main aside .updates  span{
     font-size: 2.8rem;
-}
-main aside .updates a{
+ }
+ main aside .updates a{
     display: block;
     width: 100%;
     background: var(--color-primary);
@@ -287,23 +284,33 @@ main aside .updates a{
     padding: 0.8rem 0;
     margin-top:2rem;
     transition: all 300ms ease;
-}
-main aside .updates a:hover {
+ }
+ main aside .updates a:hover {
     box-shadow: 0 9rem 2rem var(--color-primary-light);
+ }
+ /* .................main2................... */
+ main .main2{
+     display: flex;
+     gap: 2rem;
+     /* width: calc(100%-200px); */
+     /* border: solid red; */
+ }
+main .main2 #middle{
+    width: 60%;
+    /* border: #131316 solid; */
 }
-/* ..............................middle.................... */
-main #middle .header{
+ main .main2 #middle .header{
     display: flex;
     align-items: center;
     gap:1rem;
-}
-main #middle .header input[type='date']{
+ }
+ main .main2 #middle .header input[type='date']{
     padding: 0.5rem 2rem;
     border-radius: var(--border-radius-2);
     background: var(--color-white);
     color: var(--color-gray-dark);
-}
-main #middle .cards{
+ }
+ main .main2 #middle .cards{
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -311,8 +318,8 @@ main #middle .cards{
     justify-content: space-between;
     align-items: center; */
     gap: 1.5rem;
-}
-main #middle .cards .card{
+ }
+ main .main2 #middle .cards .card{
     background: linear-gradient(#ff796f, #bd261b);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -322,93 +329,93 @@ main #middle .cards .card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   min-width: 22rem;
+    width: 100%;
     box-shadow: 0 2rem 3rem var(--color-danger-light); 
     transition: all,200ms ease;
-}
-main #middle .cards .card:nth-child(2){
+ }
+ main .main2 #middle .cards .card:nth-child(2){
     background: linear-gradient(#7f8191, #27282f);
     box-shadow: 0 2rem 3rem rgba(0, 0 , 0, 0,2);
-}
-main #middle .cards .card:nth-child(3){
+ }
+ main .main2 #middle .cards .card:nth-child(3){
     background: linear-gradient(#5d70ff, #5719c2);
     box-shadow: 0 2rem 3rem var(--color-primary-light);
-}
-main #middle .cards .card:hover{
+ }
+ main .main2 #middle .cards .card:hover{
     box-shadow: none;
-}
-main #middle .cards .card .top{
+ }
+ main .main2 #middle .cards .card .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-main #middle .cards .card .top .left{
+ }
+ main .main2 #middle .cards .card .top .left{
     display: flex;
     /* justify-content: space-between; */
-    /* align-items: center; */
+    align-items: center;
     gap: 0.5rem;
-}
-main #middle .cards .card .top .left h2{
+ }
+ main .main2 #middle .cards .card .top .left h2{
     font-weight: 500;
     font-size: 1.4rem;
-}
-main #middle .cards .card .top .left img {
+ }
+ main .main2 #middle .cards .card .top .left img {
     width: 2.3rem;
     height: 2.3rem;
     border: 1px solid white;
     padding: 0.4rem;
-}
-main #middle .card .top img.right{
+ }
+ main .main2  #middle .card .top img.right{
     width: 3.5rem;
-}
-main #middle .card .midde{
+ }
+ main .main2 #middle .card .midde{
     display: flex;
     justify-content: space-between;
-}
-main #middle .card .midde .chip{
-    width: 3.5rem;
-}
-main #middle .card .bottom{
+ }
+ main .main2 #middle .card .midde .chip img{
+    width: 3.5rem !important;
+ }
+ main .main2 #middle .card .bottom{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-}
-main #middle .card .bottom .right{
+ }
+ main .main2 #middle .card .bottom .right{
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-}
+ }
 /* .......................end of cards....................... */
-main #middle .montly-reports{
+main .main2 #middle .montly-reports{
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     margin-top: 2rem;
-}
-main #middle .montly-reports h1{
+ }
+ main .main2 #middle .montly-reports h1{
     font-weight: 700;
     font-size: 1.8rem;
-}
-/* .......................end of montlly....................... */
-main .fast-payment{
+ }
+ /* .......................end of montlly....................... */
+main .main2 .fast-payment{
     margin-top: 2rem;
     display: flex;
     align-self: center;
     gap: 2rem;
-}
-main .fast-payment .badges{
+ }
+ main .main2 .fast-payment .badges{
     display: flex;
     gap: 1rem;
     align-self: center;
     flex-wrap: wrap;
     max-width: 100%;
-}
-main .fast-payment .badge span{
-width: 7px;
-height: 7px;
-border-radius: 50%;
-}
-main .fast-payment .badge{
+ }
+ main .main2 .fast-payment .badge span{
+ width: 7px;
+ height: 7px;
+ border-radius: 50%;
+ }
+ main .main2 .fast-payment .badge{
     background: var(--color-white);
     padding: 0.6rem var(--card-padding);
     border-radius: var(--border-radius-2);
@@ -416,244 +423,309 @@ main .fast-payment .badge{
     align-items: center;
     gap: 1rem;
     transition: all 300ms ease;
-}
-main .fast-payment .badge:hover{
+ }
+ main .main2 .fast-payment .badge:hover{
     box-shadow: 0 0 1.5rem var(--color-primary-light);
-}
-main .fast-payment .badge :nth-child(1){
+ }
+ main .main2 .fast-payment .badge :nth-child(1){
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-}
-main .fast-payment .badge div{
+ }
+ main .main2 .fast-payment .badge div{
     display: flex;
     gap: 2rem;
     align-items: center;
-}
-/* ...................canvassssss ....................*/
-canvas#myChart{
+ }
+ /* ...................canvassssss ....................*/
+ canvas#myChart{
     background: var(--color-white);
     max-width: 100%;
     margin-top: 2rem;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
-}
+ }
+
 /* ...................investments ....................*/
-#right .investment{
+#right{
+    width: 40%;
+}
+ #right .investment{
     background: var(--color-white);
     border-radius: var(--border-radius-1);
     /* padding: var(--card-padding); */
-}
-#right .investment img{
+ }
+ #right .investment img{
     width: 2.4rem;
-}
-#right .investment .header{
+ }
+ #right .investment .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--card-padding);
     padding-bottom: 0;
-}
-#right .header a{
+ }
+ #right .header a{
     display: flex;
     justify-content: center;
     align-items: center;
     color: vat(--color-primary);
-}
-#right .investment .investments{
+ }
+ #right .investment .investments{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--card-padding);
     border-bottom: 1px solid var(--color-light);
     transition: all 300ms ease;
-}
-#right .investment .investments:last-child{
+ }
+ #right .investment .investments:last-child{
     border: none;
-}
-#right .investment .investments:hover{
+ }
+ #right .investment .investments:hover{
     background: var(--color-light);
     cursor: pointer;
-}
-/* ...............transaction ...................... */
-main .recent-transaction img {
+ }
+ /* ...............transaction ...................... */
+ main .recent-transaction img {
     width: 2.2rem;
-}
-main .recent-transaction .transactions{
+ }
+ main .recent-transaction .transactions{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem var(--card-padding);
     border-radius: var(--card-border-radius);
     transition: all 300ms ease;
-}
-.recent-transaction .header{
+ }
+ .recent-transaction .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--card-padding);
     padding-bottom: 0;
-}
-.recent-transaction .header a{
+ }
+ .recent-transaction .header a{
     display: flex;
     justify-content: center;
     align-items: center;
     color: vat(--color-primary);
-}
-main .recent-transaction .transactions:hover{
+ }
+ main .recent-transaction .transactions:hover{
     background: var(--color-white);
     cursor: pointer;
-}
-main .recent-transaction .transactions .services {
+ }
+ main .recent-transaction .transactions .services {
     display: flex;
     gap: 1rem;
-}
-main .recent-transaction .transactions .services .icon{
+ }
+ main .recent-transaction .transactions .services .icon{
     padding: var(--padding-2);
     border-radius: var(--border-radius-1);
     display: flex;
     align-items: center;
-}
-main .recent-transaction .transactions .card-detais{
+ }
+ main .recent-transaction .transactions .card-detais{
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-main .recent-transaction .transactions .card-detais .card{
+ }
+ main .recent-transaction .transactions .card-detais .card{
     width: 4.6rem;
     height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--border-radius-2);
-}
+ }
+
 /*.............................Media queries for phones.............................. */
 @media screen 
 and (min-width:250px)
 and (max-width:600px){
-       nav .profile-area{
-             gap: 2.6rem;
-       }
-       nav .container .search{
-        display: none;
-    }
-    nav .profile  h5, 
-    nav  .profile span{
-        display: none;
-    }
-    
-    nav  .profile-area button{
-        display: inline;
-        color: var(--color-dark);
-    }
-    main {
-        grid-template-columns: 1fr ;
-    }
-    main aside{
-        position: fixed;
-        top: 0;
-        left: -100%;
-        z-index: 3;
-        background: var(--color-white);
-        width: 22rem;
-        height: 100vh;
-        display: none;
-        box-shadow: 2rem 0 2rem var(--color-primary-light);
-        animation: showmenu 400ms ease forwards;
-    }
-    @keyframes showmenu {
-        to{
-            left: 0;
-        }
-     }
-    main aside button{
-        display: block;
-        width: 3rem;
-        height: 3rem;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        z-index: 4;
-        color: var(--color-dark);
-        cursor: pointer;
-    }
-    main aside .sidebar{
-        margin-top: 4rem;
-    }
-    main aside .updates{
-        display: none;
-    }
-    main #middle .cards {
-        grid-template-columns:1fr ;
-    }
-    main .fast-payment{
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 3rem;
-        gap: 1.4rem;
-    }
-    
+   nav .profile-area{
+       gap: 2.6rem;
+ }
+ nav .container .search{
+   display: none;
 }
-/*.............................Media queries for tablets.............................. */
+nav .profile  h5, 
+nav  .profile span{
+   display: none;
+}
+
+nav  .profile-area button{
+   display: inline;
+   color: var(--color-dark);
+}
+.main2 {
+   /* grid-template-columns: 1fr ; */
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+   /* width: calc(100%-200px); */
+   /* border: solid red; */
+}
+main .main2 #middle{
+    width: 100%;
+    /* border: #131316 solid; */
+}
+#right{
+    width: 100%;
+}
+
+main aside{
+   position: fixed;
+   top: 0;
+   left: -100%;
+   z-index: 3;
+   background: var(--color-white);
+   width: 22rem;
+   height: 100vh;
+   display: none;
+   box-shadow: 2rem 0 2rem var(--color-primary-light);
+   animation: showmenu 400ms ease forwards;
+}
+@keyframes showmenu {
+   to{
+       left: 0;
+   }
+}
+main aside button{
+   display: block;
+   width: 3rem;
+   height: 3rem;
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   z-index: 4;
+   color: var(--color-dark);
+   cursor: pointer;
+}
+main aside .sidebar{
+   margin-top: 4rem;
+}
+main aside .updates{
+   display: none;
+}
+main .main2 #middle .cards {
+   grid-template-columns:1fr ;
+}
+main .main2 .fast-payment{
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 3rem;
+   gap: 1.4rem;
+}
+}
 @media screen 
 and (min-width:601px)
 and (max-width:1024px){
-    nav .container .search{
-        display: none;
+   nav .container .search{
+       display: none;
+   }
+   nav .profile-area{
+       gap: 2rem;
+   }
+   nav  .profile-area button{
+       display: inline;
+       color: var(--color-dark);
+   }
+   .main2 {
+    /* grid-template-columns: 1fr ; */
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    /* width: calc(100%-200px); */
+    /* border: solid red; */
+ }
+ main .main2 #middle{
+     width: 100%;
+     /* border: #131316 solid; */
+ }
+ #right{
+     width: 100%;
+ }
+   main aside{
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 3;
+       background: var(--color-white);
+       width: 22rem;
+       height: 100vh;
+       display: none;
+       box-shadow: 2rem 0 2rem var(--color-primary-light);
+       animation: showmenu 500ms ease forwards;
+   }
+   @keyframes showmenu {
+       to{
+           left: 0;
+       }
     }
-    nav .profile-area{
-        gap: 2rem;
-    }
-    nav  .profile-area button{
-        display: inline;
-        color: var(--color-dark);
-    }
-    main {
-        grid-template-columns: 1fr ;
-    }
-    main aside{
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 3;
-        background: var(--color-white);
-        width: 22rem;
-        height: 100vh;
-        display: none;
-        box-shadow: 2rem 0 2rem var(--color-primary-light);
-        animation: showmenu 500ms ease forwards;
-    }
-    @keyframes showmenu {
-        to{
-            left: 0;
-        }
+   main aside button{
+       display: block;
+       width: 3rem;
+       height: 3rem;
+       position: absolute;
+       top: 1rem;
+       right: 1rem;
+       z-index: 4;
+       color: var(--color-dark);
+       cursor: pointer;
+   }
+   main aside .sidebar{
+       margin-top: 4rem;
+   }
+   main aside .updates{
+       display: none;
+   }
+   main .main2  #middle .cards{
+     grid-template-columns: 1fr 1fr;
+   }
+   main .main2 .fast-payment{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+ }
+    canvas{
+       margin:3rem 0 1rem;
+   }
+   main .main2 .recent-transaction {
+       margin-top: 3rem;
+   }
+   
+}
+@media screen 
+and (min-width:1025px)
+and (max-width:1500px){
+    main aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* height: 100vh; */
+        width: 350px;
      }
-    main aside button{
-        display: block;
-        width: 3rem;
-        height: 3rem;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        z-index: 4;
-        color: var(--color-dark);
-        cursor: pointer;
+    main .main2{
+        flex-direction: column;
     }
-    main aside .sidebar{
-        margin-top: 4rem;
+    main .main2 #middle{
+        width: 100%;
     }
-    main aside .updates{
-        display: none;
+    main .main2 #right{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
-    main #middle .cards{
-      grid-template-columns: 1fr 1fr;
+    main .main2 .recent-transaction{
+        width: 100%;
     }
-    main canvas{
-        margin:3rem 0 1rem;
-    }
-    main .recent-transaction {
-        margin-top: 3rem;
+    main .main2 .investment{
+        width: 100%;
     }
 }
+
 

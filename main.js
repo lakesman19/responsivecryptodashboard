@@ -1,30 +1,3 @@
-// const chart = document.querySelector('.chart')
-
-//  new Chart(chart, {
-//      type:'line',
-//      data:{
-//          labals:['jan', 'feb','mar', 'apr','may','jun','july','aug','sept','oct','nov','dec'],
-
-//         datasets:[
-//             {
-//                 labels:'BTC',
-//                 data: [29374, 33537, 33537,34437,33677,33937,33559,33237,33127,33697,35037],
-//                 bordercolor:'red',
-//                 borderwidth:2
-//             },
-//             {
-//                 labels:'ETH',
-//                 data: [29374, 33537, 33537,34437,33677,33937,33559,33237,33127,33697,35037],
-//                 bordercolor:'blue',
-//                 borderwidth:2
-//             },
-
-//         ]
-//      },
-//      options:{
-//          responsive:true
-//      }
-//  })
 
 const labels = [
   'January',
