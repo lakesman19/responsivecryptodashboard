@@ -445,7 +445,7 @@ main .main2 .fast-payment{
  /* ...................canvassssss ....................*/
  canvas#myChart{
     background: var(--color-white);
-    max-width: 100%;
+    width: 100%;
     margin-top: 2rem;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
@@ -551,7 +551,7 @@ main .main2 .fast-payment{
 /*.............................Media queries for phones.............................. */
 @media screen 
 and (min-width:250px)
-and (max-width:350px){
+and (max-width:400px){
     nav .container .search{
         display: none;
      }
@@ -651,7 +651,7 @@ nav  .profile-area button{
 
 
 @media screen 
-and (min-width:351px)
+and (min-width:401px)
 and (max-width:600px){
    nav .profile-area{
        gap: 2.6rem;
