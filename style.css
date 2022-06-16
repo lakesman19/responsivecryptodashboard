@@ -579,6 +579,7 @@ nav  .profile-area button{
  }
  #right{
      width: 100%;
+     margin-top: 2rem;
  }
  main aside{
     position: fixed;
@@ -625,6 +626,13 @@ nav  .profile-area button{
     margin-top: 3rem;
     width: 100%;
     gap: 1.4rem;
+ }
+ main .main2 .fast-payment .badges{
+    display: flex;
+    gap: 2rem;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
  }
  main .main2 #middle .montly-reports{
     display: flex;
